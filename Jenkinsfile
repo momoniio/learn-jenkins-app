@@ -157,7 +157,7 @@ pipeline {
             }
 
             environment {
-                CI_ENVIRONMENT_URL = 'YOUR NETLIFY URL'
+                CI_ENVIRONMENT_URL = 'https://cheery-taiyaki-7c47fb.netlify.app'
             }
 
             steps {
