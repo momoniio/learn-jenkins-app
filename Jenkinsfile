@@ -78,14 +78,13 @@ pipeline {
 
 
 
-        stage('Deploy Staging & Staging E2E') {
+stage('Deploy staging') {
             agent {
                 docker {
                     image 'mcr.microsoft.com/playwright:v1.39.0-jammy'
                     reuseNode true
                 }
             }
-        }
 
             steps {
                 sh '''
@@ -105,7 +104,6 @@ pipeline {
                 }
             }
         }
-
         stage('Approval') {
             steps {
                 timeout(time: 15, unit: 'MINUTES') {
